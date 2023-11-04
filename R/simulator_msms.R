@@ -51,7 +51,7 @@ msms_class <- R6Class("Msms", inherit = ms_class,
       seed <- sample_seed(1)
 
       # Create the command
-      cmd <- paste("-jar", private$jar,
+      cmd <- paste("-Xms24g -Xmx24g -jar", private$jar,
                    paste(sample_size, n_loci, command),
                    "-seed", format(seed, scientific = FALSE))
 
